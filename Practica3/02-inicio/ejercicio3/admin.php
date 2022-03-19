@@ -1,26 +1,8 @@
 <?php
 
-//Inicio del procesamiento
-session_start();
+$tituloPagina = 'Administrar';
 
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="estilo.css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Administrar</title>
-</head>
-
-<body>
-
-<div id="contenedor">
-
-<?php
-	require("includes/cabecera.php");
-	require("includes/sidebarIzq.php");
-?>
+$contenidoPrincipal = <<<EOS
 <main>
 	<article>
 	<?php
@@ -38,14 +20,7 @@ session_start();
 	?>
 	</article>
 </main>
-<?php
+EOS;
 
-	require("includes/sidebarDer.php");
-	require("includes/pie.php");
-
-?>
-</div>
-
-</body>
-</html>
+require __DIR__.'/includes/plantillas/plantilla.php';
 
